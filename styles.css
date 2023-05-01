@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    background-color: rgb(230, 255, 255);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    height: 3.5rem;
+    background-color: rgba(243, 243, 243, 0.5);
+    border: 1px solid #e7e7e7;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+nav a {
+    width: 7rem;
+    height: 2.6rem;
+    border-radius: 5px;
+    margin: 0 10px;
+    background-color: rgba(243, 243, 243, 0.5);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a:hover{
+    color: white;
+    border: 2px solid white;
+    background-color: rgba(243, 243, 243, 0.8);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav a:active {
+    background-color: rgba(130, 255, 255, 0.3);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pocetna_slika {
+    position: relative;
+    width: 100%;
+    height: 32rem;
+    margin-bottom: 8rem;
+}
+
+.pocetna_slika img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.pocetna_slika h1 {
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
+    color: #f3f3f3;
+    font-size: 8rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.pocetna_slika p {
+    position: absolute;
+    top: 26rem;
+    background-color: rgba(231, 231, 231, 0.8);
+    color: #666;
+    padding: 1rem 2rem;
+    left: 3rem;
+    border-radius: 5px;
+    width: 75%;
+    font-size: 1.4rem;
+    box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.galerija {
+    padding: 1rem;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 320px;
+    grid-auto-flow: dense;
+}
+
+.galerija > figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.galerija > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.siroko {
+    grid-column: span 2;
+}
+.visoko {
+    grid-row: span 2;
+}
+.veliko {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+@media only screen and (max-width: 1024px) {
+    .pocetna_slika {
+        height: 24rem;
+    }
+    .pocetna_slika h1 {
+        top: 8rem;
+        font-size: 5.5rem;
+    }
+    .pocetna_slika p {
+        top: 16rem;
+    }
+    .galerija {
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pocetna_slika {
+        height: 20rem;
+        margin-bottom: 10rem;
+    }
+    .pocetna_slika h1 {
+        font-size: 5rem;
+    }
+    .pocetna_slika p {
+        top: 16rem;
+        font-size: 1.2rem;
+    }
+    .galerija {
+        gap: 0.8rem;
+        padding: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .pocetna_slika h1 {
+        font-size: 3rem;
+        left: 3.3rem
+    }
+    .pocetna_slika p {
+        top: 14rem;
+        font-size: 1rem;
+    }
+    .galerija {
+        gap: 0.6rem;
+        padding: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    nav {
+        height: 2.5rem;
+    }
+    nav a {
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+    .pocetna_slika {
+        height: 14rem;
+        margin-bottom: 7rem;
+    }
+    .pocetna_slika h1 {
+        top: 5rem;
+        left: 4rem;
+        font-size: 2.5rem;
+    }
+    .pocetna_slika p {
+        top: 10rem;
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+    .galerija {
+        gap: 0.6rem;
+        padding: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .pocetna_slika {
+        height: 14rem;
+        margin-bottom: 6rem;
+    }
+    .pocetna_slika h1 {
+        top: 5rem;
+        left: 3rem;
+        font-size: 2.5rem;
+    }
+    .pocetna_slika p {
+        top: 10rem;
+        left: 1.6rem;
+        width: 85%;
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+    .galerija {
+        gap: 0.4rem;
+        padding: 0.4rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .pocetna_slika {
+        margin-bottom: 5rem;
+    }
+    .pocetna_slika h1 {
+        top: 5rem;
+        left: 2.2rem;
+        font-size: 2.2rem;
+    }
+    .pocetna_slika p {
+        top: 10rem;
+        left: 1rem;
+        width: 90%;
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .galerija{
+        padding: 0.2rem;
+        gap: 0.2rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
