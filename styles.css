@@ -20,6 +20,8 @@ body::-webkit-scrollbar {
 
 nav {
     position: absolute;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 3.5rem;
     background-color: rgba(243, 243, 243, 0.5);
@@ -30,10 +32,11 @@ nav {
 }
 
 nav a {
-    width: 7rem;
+    width: max-content;
     height: 2.6rem;
     border-radius: 5px;
-    margin: 0 10px;
+    margin: 0 0.8rem;
+    padding: 0.6rem;
     background-color: rgba(243, 243, 243, 0.5);
     text-decoration: none;
     font-size: 1rem;
@@ -45,10 +48,9 @@ nav a {
 }
 
 nav a:hover{
-    color: white;
-    border: 2px solid white;
+    color: #666;
+    border: 1px solid #666;
     background-color: rgba(243, 243, 243, 0.8);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 nav a:active {
@@ -86,21 +88,14 @@ main {
 .pocetna_slika p {
     position: absolute;
     top: 26rem;
-    background-color: rgba(231, 231, 231, 0.8);
-    color: #666;
-    padding: 1rem 2rem;
     left: 3rem;
-    border-radius: 5px;
     width: 75%;
-    font-size: 1.4rem;
+    color: #666;
+    background-color: rgba(231, 231, 231, 0.8);
     box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.3);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.4rem;
 }
 
 .galerija {
@@ -113,30 +108,55 @@ img {
     grid-auto-flow: dense;
 }
 
-.galerija > figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 1rem;
+.galerija figure {
+    margin-bottom: 1rem;
 }
 
-.galerija > figure > img {
+.galerija figure a {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
 
+figcaption {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
 .siroko {
     grid-column: span 2;
 }
+
 .visoko {
     grid-row: span 2;
 }
+
 .veliko {
     grid-column: span 2;
     grid-row: span 2;
+}
+
+#onama {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #666;
+    background-color: rgba(243, 243, 243, 0.8);
+    border: 1px solid #e7e7e7;
+    padding: 1rem;
+}
+
+#onama div {
 }
 
 @media only screen and (max-width: 1024px) {
