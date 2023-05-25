@@ -165,6 +165,10 @@ figcaption {
     font-size: 1.5rem;
 }
 
+.iduce {
+    margin-top: 1rem;
+}
+
 .kviz {
     display: flex;
     flex-wrap: wrap;
