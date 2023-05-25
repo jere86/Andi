@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-nav {
+header {
     position: absolute;
     display: flex;
     justify-content: space-around;
@@ -31,11 +31,11 @@ nav {
     z-index: 1;
 }
 
-nav a {
+header a {
     width: max-content;
     height: 2.6rem;
     border-radius: 5px;
-    padding: 0.2rem;
+    padding: 0.2rem 0.5rem;
     background-color: rgba(243, 243, 243, 0.5);
     text-decoration: none;
     font-size: 1rem;
@@ -46,13 +46,13 @@ nav a {
     align-items: center;
 }
 
-nav a:hover{
+header a:hover{
     color: #666;
     border: 1px solid #666;
     background-color: rgba(243, 243, 243, 0.8);
 }
 
-nav a:active {
+header a:active {
     background-color: rgba(243, 255, 255, 0.5);
 }
 
@@ -149,6 +149,44 @@ figcaption {
     grid-row: span 2;
 }
 
+#kviz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: min-content;
+    padding: 1rem;
+    background-color: #6666661a;
+}
+
+.pitanje {
+    align-self: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.kviz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.kviz div {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.kviz label {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.kviz input {
+    margin-left: 0.5rem;
+}
+
 #ucenici {
     width: 100%;
     display: flex;
@@ -211,10 +249,10 @@ figcaption {
 }
 
 @media only screen and (max-width: 425px) {
-    nav {
+    header {
         height: 2.5rem;
     }
-    nav a {
+    header a {
         height: 2rem;
         font-size: 0.8rem;
     }
